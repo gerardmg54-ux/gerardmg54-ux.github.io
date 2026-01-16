@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RunComp Ultimate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background:#0f172a;
+  color:white;
+  margin:0;
+  padding:20px;
+}
+h1 {
+  text-align:center;
+}
+.card {
+  background:#1e293b;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+.card img {
+  width:100%;
+  border-radius:8px;
+}
+button {
+  padding:10px 15px;
+  border:none;
+  border-radius:6px;
+  background:#22c55e;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+}
+.admin {
+  background:#334155;
+  padding:15px;
+  border-radius:10px;
+}
+input {
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+  border-radius:5px;
+  border:none;
+}
+.hidden {
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🏆 RunComp Ultimate</h1>
+
+<div class="card">
+  <h2>Win £500 Cash</h2>
+  <img src="https://raw.githubusercontent.com/gerardmg54-ux/runcomp/main/file_000000000e30720a9d6.png">
+  <p>Enter now for your chance to win £500 cash.</p>
+  <button>Enter Competition</button>
+</div>
+
+<div class="card">
+  <h2>Win £300 Cash</h2>
+  <img src="https://raw.githubusercontent.com/gerardmg54-ux/runcomp/main/file_000000000c0f4720a8f1.png">
+  <p>£300 cash prize – limited entries!</p>
+  <button>Enter Competition</button>
+</div>
+
+<div class="card">
+  <h2>Special Prize Draw</h2>
+  <img src="https://raw.githubusercontent.com/gerardmg54-ux/runcomp/main/file_000000000e91871f48ed.png">
+  <p>Don’t miss this special draw.</p>
+  <button>Enter Competition</button>
+</div>
+
+<hr>
+
+<div class="admin">
+  <h3>Admin Login</h3>
+  <input type="password" id="pass" placeholder="Admin password">
+  <button onclick="login()">Login</button>
+
+  <div id="adminPanel" class="hidden">
+    <h4>Admin Panel</h4>
+    <button onclick="alert('Competition added (demo)')">Add Competition</button>
+  </div>
+</div>
+
+<script>
+function login() {
+  if (document.getElementById("pass").value === "admin123") {
+    document.getElementById("adminPanel").classList.remove("hidden");
+  } else {
+    alert("Wrong password");
+  }
+}
+</script>
+
+</body>
+</html>
